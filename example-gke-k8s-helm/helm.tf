@@ -2,6 +2,10 @@ variable "helm_version" {
   default = "v2.9.1"
 }
 
+variable "test" {
+  default = "v2.9.1"
+}
+
 variable "app_name" {
   default = "drupal"
 }
