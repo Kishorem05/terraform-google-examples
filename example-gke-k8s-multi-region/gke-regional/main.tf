@@ -57,6 +57,7 @@ resource "google_container_cluster" "default" {
     when    = "destroy"
     command = "sleep 90"
   }
+  enable_shielded_nodes = true
 }
 
 output "instance_groups" {
