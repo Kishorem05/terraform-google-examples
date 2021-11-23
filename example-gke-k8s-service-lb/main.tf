@@ -51,6 +51,9 @@ resource "google_container_cluster" "default" {
     when    = "destroy"
     command = "sleep 90"
   }
+  pod_security_policy_config {
+    enabled = true
+  }
 }
 
 output network {
