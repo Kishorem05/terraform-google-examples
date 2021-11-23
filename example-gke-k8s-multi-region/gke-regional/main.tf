@@ -39,7 +39,7 @@ resource "google_container_cluster" "default" {
   name               = "${var.cluster_name}"
   region             = "${var.region}"
   initial_node_count = "${var.node_count}"
-  min_master_version = "${var.master_version != "" ? var.master_version : data.google_container_engine_versions.default.latest_master_version}"
+  min_master_version = "1.12"}"
   network            = "${var.network}"
   subnetwork         = "${var.subnetwork}"
 
