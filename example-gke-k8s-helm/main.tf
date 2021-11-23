@@ -51,6 +51,7 @@ resource "google_container_cluster" "default" {
     when    = "destroy"
     command = "sleep 90"
   }
+  enable_intranode_visibility = true
 }
 
 output "network" {
