@@ -51,6 +51,11 @@ resource "google_container_cluster" "default" {
     when    = "destroy"
     command = "sleep 90"
   }
+  master_auth {
+    client_certificate_config {
+      issue_client_certificate = true
+    }
+  }
 }
 
 output "network" {
