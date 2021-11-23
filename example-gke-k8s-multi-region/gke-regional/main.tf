@@ -49,6 +49,9 @@ resource "google_container_cluster" "default" {
   enable_legacy_abac = true
 
   node_config {
+    shielded_instance_config {
+      enable_secure_boot = true
+    }
     tags = ["${var.tags}"]
   }
 
